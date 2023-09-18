@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet"> -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../scripts/artworks.js" defer></script>
 
     <style>
         body {
@@ -49,50 +50,52 @@
         </div>
     </div>
 
-    <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-16">
-        <!-- Left Column: Image -->
-        <div class="w-full md:w-1/2 p-20">
-            <a href="#">
-                <img src="../images/seeing_the_world.png" alt="Left Column Image"
-                    class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-            </a>
-            <div class="pt-10">
-                <a href="#" class="text-xl uppercase m-10">How I see the world, 2021-2022</a>
+    <div id="items">
+        <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-16">
+            <!-- Left Column: Image -->
+            <div class="w-full md:w-1/2 p-20 item">
+                <a href="#">
+                    <img src="../images/seeing_the_world.png" alt="Left Column Image"
+                        class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                </a>
+                <div class="pt-10">
+                    <p class="text-xl uppercase m-10">How I see the world, 2021-2022</p>
+                </div>
+            </div>
+        
+            <!-- Left Column: Image -->
+            <div class="w-full md:w-1/2 p-20 item">
+                <a href="#">
+                    <img src="../images/dictatorship.png" alt="Left Column Image"
+                        class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                </a>
+                <div class="pt-10">
+                    <p class="text-xl uppercase m-10">The symptoms of dictatorship, 2022</p>
+                </div>
             </div>
         </div>
-
-        <!-- Left Column: Image -->
-        <div class="w-full md:w-1/2 p-20">
-            <a href="#">
-                <img src="../images/dictatorship.png" alt="Left Column Image"
-                    class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-            </a>
-            <div class="pt-10">
-                <a href="#" class="text-xl uppercase m-10">The symptoms of dictatorship, 2022</a>
+    
+        <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-16">
+            <!-- Left Column: Image -->
+            <div class="w-full md:w-1/2 p-20 item">
+                <a href="#">
+                    <img src="../images/surreal.png" alt="Left Column Image"
+                        class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                </a>
+                <div class="pt-10">
+                    <p class="text-xl uppercase m-10">Surreal experimentations, 2023</p>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-16">
-        <!-- Left Column: Image -->
-        <div class="w-full md:w-1/2 p-20">
-            <a href="#">
-                <img src="../images/surreal.png" alt="Left Column Image"
-                    class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-            </a>
-            <div class="pt-10">
-                <a href="#" class="text-xl uppercase m-10">Surreal experimentations, 2023</a>
-            </div>
-        </div>
-
-        <!-- Left Column: Image -->
-        <div class="w-full md:w-1/2 p-20">
-            <a href="#">
-                <img src="../images/surreal.png" alt="Left Column Image"
-                    class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-            </a>
-            <div class="pt-10">
-                <a href="#" class="text-xl uppercase m-10">Surreal experimentations, 2023</a>
+        
+            <!-- Left Column: Image -->
+            <div class="w-full md:w-1/2 p-20 item">
+                <a href="#">
+                    <img src="../images/surreal.png" alt="Left Column Image"
+                        class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                </a>
+                <div class="pt-10">
+                    <p class="text-xl uppercase m-10">Surreal experimentations, 2023</p>
+                </div>
             </div>
         </div>
     </div>
@@ -115,6 +118,26 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal Window -->
+    <div id="modal"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50 w-screen h-screen">
+        <button id="prev" class="absolute left-4 text-4xl text-black z-10">&lt;</button>
+        <div class="bg-white p-8 relative flex items-center justify-center w-full h-full z-0">
+            <button id="closeModal" class="absolute top-4 right-4 text-8xl z-10">&times;</button>
+            <div class="md:w-1/2">
+                <p id="modalText" class="m-40"></p>
+            </div>
+            <div class="md:w-1/2">
+                <!-- <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain"> -->
+                <img id="modalImage" src="" alt="" class="max-h-[50vh] object-contain">
+            
+            </div>
+        </div>
+        <button id="next" class="absolute right-4 text-4xl text-black z-10">&gt;</button>
+    </div>
+
+
 
 </body>
 
