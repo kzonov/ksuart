@@ -44,3 +44,25 @@ items.forEach((item, index) => {
         openModal(index);
     });
 });
+
+document.addEventListener("keydown", function (event) {
+    // ESC key
+    if (event.key === "Escape") {
+        // Close the modal
+        modal.classList.add('hidden');
+    }
+
+    // Left Arrow key
+    if (event.key === "ArrowLeft") {
+        // Show the previous item
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        openModal(currentIndex);
+    }
+
+    // Right Arrow key
+    if (event.key === "ArrowRight") {
+        // Show the next item
+        currentIndex = (currentIndex + 1) % items.length;
+        openModal(currentIndex);
+    }
+});
