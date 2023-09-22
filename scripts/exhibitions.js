@@ -8,18 +8,11 @@ reportLinks.forEach((link) => {
         event.preventDefault(); // Prevent the default action of the link
 
         const images = link.parentElement.querySelectorAll('.photo-report-images img');
-        console.log(link.parentElement);
         const imageContainer = reportModal.querySelector('.image-container');
 
         imageContainer.innerHTML = '';
 
-        // Set the src for each image in the modal
-        // images.forEach((img, index) => {
-        //     document.getElementById(`reportImg${index + 1}`).src = img.src;
-        // });
-
         images.forEach(img => {
-            console.log(img);
             const newImg = document.createElement('img');
             newImg.src = img.src; // Set the source correctly
             imageContainer.appendChild(newImg); // Append new images to the container

@@ -40,7 +40,8 @@ next.addEventListener('click', () => {
 
 // Add click event to each item
 items.forEach((item, index) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
         openModal(index);
     });
 });
