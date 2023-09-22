@@ -18,7 +18,7 @@ main {
     height: 92px;
     flex-grow: 0;
     margin: 0 782px 0 0;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 40px;
     font-weight: normal;
     font-stretch: normal;
@@ -34,7 +34,7 @@ main {
     height: 26px;
     flex-grow: 0;
     margin: 0 59px 66px 782px;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 24px;
     font-weight: normal;
     font-stretch: normal;
@@ -50,7 +50,7 @@ main {
     height: 26px;
     flex-grow: 0;
     margin: 0 43px 66px 59px;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 24px;
     font-weight: normal;
     font-stretch: normal;
@@ -66,7 +66,7 @@ main {
     height: 26px;
     flex-grow: 0;
     margin: 0 28px 66px 43px;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 24px;
     font-weight: normal;
     font-stretch: normal;
@@ -82,7 +82,7 @@ main {
     height: 26px;
     flex-grow: 0;
     margin: 0 0 66px 28px;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 24px;
     font-weight: normal;
     font-stretch: normal;
@@ -103,7 +103,7 @@ main {
     width: 529px;
     height: 37px;
     margin: 123px 288px 14px 135px;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 24px;
     font-weight: bold;
     font-stretch: normal;
@@ -141,7 +141,7 @@ span.bio-text {
     height: 53px;
     flex-grow: 0;
     margin: 0 0px 0 0;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 24px;
     font-weight: bold;
     font-stretch: normal;
@@ -158,7 +158,7 @@ span.bio-text {
     flex-grow: 0;
     margin: 53px 0px 0 0;
     padding: 26px 0 0;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -173,7 +173,7 @@ span.bio-text {
     width: 345px;
     height: 27px;
     flex-grow: 0;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -189,7 +189,7 @@ span.bio-text {
     height: 27px;
     flex-grow: 0;
     margin: 53px 0px 53px 0;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -205,7 +205,7 @@ span.bio-text {
     height: 27px;
     flex-grow: 0;
     margin: 53px 0px 0 0;
-    font-family: Roboto;
+    font-family: K2D;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
