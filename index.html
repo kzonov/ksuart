@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Kseniia Antipina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400&display=swap" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet"> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'K2D', sans-serif;
@@ -30,7 +32,8 @@
                 </div>
 
                 <!-- Menu Items -->
-                <div class="text-sm space-x-8 lowercase flex items-center">
+                <!-- <div class="text-sm space-x-8 lowercase flex items-center"> -->
+                <div class="hidden md:flex text-sm space-x-8 lowercase items-center">
                     <a href="about_biography.html" class="text-base">about</a>
                     <a href="artworks.html" class="text-base">artworks</a>
                     <a href="exhibitions.html" class="text-base">exhibitions</a>
@@ -39,19 +42,38 @@
                         <img src="images/icons/instagram.png" alt="https://www.instagram.com/germenevtika/" class="h-6 w-6"> <!-- Adjusted the size of the image -->
                     </a>
                 </div>
+
+                <!-- Mobile Menu Icon -->
+                <div id="openMenu" class="md:hidden text-3xl cursor-pointer">☰</div>
             </div>
         </div>
 
         <!-- Header Image -->
+        <!-- <img src="images/image_header.jpg" alt="Header Image" class="w-full object-cover"> -->
+        <!-- <img src="images/image_header.jpg" alt="Header Image" class="w-full h-[100vh] md:h-auto object-cover"> -->
         <img src="images/image_header.jpg" alt="Header Image" class="w-full object-cover">
-    </div>
 
-    <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-10">
-        <!-- Left Column: Image -->
-        <div class="w-full md:w-1/4">
-            <img src="images/about_photo.jpg" alt="Left Column Image" class="w-full h-full object-cover">
+        <!-- Mobile Menu -->
+        <div id="mobileNav" class="fixed inset-0 bg-white z-50 hidden flex flex-col justify-center items-center space-y-6">
+            <a href="about_biography.html" class="text-xl">about</a>
+            <a href="artworks.html" class="text-xl">artworks</a>
+            <a href="exhibitions.html" class="text-xl">exhibitions</a>
+            <a href="contact.html" class="text-xl">contact</a>
+            <a href="https://www.instagram.com/germenevtika/" target="_blank" class="text-xl">
+                <img src="images/icons/instagram.png" alt="Instagram" class="h-8 w-8">
+            </a>
+            <!-- Close icon -->
+            <div id="closeMenu" class="text-3xl cursor-pointer">✕</div>
         </div>
 
+    </div>
+
+    <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-10 md:flex-row">
+        <!-- Left Column: Image -->
+        <div class="w-full md:w-1/4">
+            <img src="images/about_photo.jpg" alt="Left Column Image" class="w-full h-screen md:h-auto object-cover">
+        </div>
+    
         <!-- Right Column: Text with Header -->
         <div class="w-full md:w-2/3 flex flex-col justify-center p-3">
             <h2 class="text-xl mb-4 uppercase">Biography</h2>
@@ -81,6 +103,19 @@
             </div>
         </div>
     </div>
+<script>
+    const mobileNav = document.getElementById('mobileNav');
+    const openMenu = document.getElementById('openMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    openMenu.addEventListener('click', () => {
+        mobileNav.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+    });
+</script>
 
 </body>
 
