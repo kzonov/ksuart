@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kseniia Antipina - Exhibitions</title>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400&display=swap" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet"> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <script src="scripts/exhibitions.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
 
     <style>
         body {
@@ -17,8 +19,6 @@
 </head>
 
 <body>
-    <!-- Add this within the <body> tags -->
-
     <div class="relative">
         <!-- Header -->
         <div class="top-0 left-0 w-full z-10">
@@ -30,22 +30,42 @@
                         Antipina
                     </a>
                 </div>
-
+    
                 <!-- Menu Items -->
-                <div class="text-sm space-x-8 lowercase flex items-center">
+                <div class="hidden md:flex text-sm space-x-8 lowercase items-center">
                     <a href="about_biography.html" class="text-base">About</a>
                     <a href="artworks.html" class="text-base">Artworks</a>
                     <a href="exhibitions.html" class="text-base underline">Exhibitions</a>
                     <a href="contact.html" class="text-base">contact</a>
-                    <a href="https://www.instagram.com/germenevtika/" target="_blank" class="text-base flex items-center"> <!-- Adjusted this a tag to use flex and align items center -->
-                        <img src="images/icons/instagram.png" alt="https://www.instagram.com/germenevtika/" class="h-6 w-6"> <!-- Adjusted the size of the image -->
+                    <a href="https://www.instagram.com/germenevtika/" target="_blank" class="text-base flex items-center">
+                        <!-- Adjusted this a tag to use flex and align items center -->
+                        <img src="images/icons/instagram.png" alt="https://www.instagram.com/germenevtika/" class="h-6 w-6">
+                        <!-- Adjusted the size of the image -->
                     </a>
                 </div>
+    
+                <!-- Mobile Menu Icon -->
+                <div id="openMenu" class="md:hidden text-3xl cursor-pointer">☰</div>
             </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileNav" class="fixed inset-0 bg-white z-50 hidden flex flex-col justify-center items-center space-y-6">
+            <!-- Close icon -->
+            <!-- <div id="closeMenu" class="text-3xl cursor-pointer ">✕</div> -->
+            <div id="closeMenu" class="text-3xl cursor-pointer absolute top-4 right-4">✕</div>
+    
+            <a href="about_biography.html" class="text-xl">about</a>
+            <a href="artworks.html" class="text-xl">artworks</a>
+            <a href="exhibitions.html" class="text-xl underline">exhibitions</a>
+            <a href="contact.html" class="text-xl">contact</a>
+            <a href="https://www.instagram.com/germenevtika/" target="_blank" class="text-xl">
+                <img src="images/icons/instagram.png" alt="Instagram" class="h-8 w-8">
+            </a>
         </div>
     </div>
 
-    <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-5">
+    <div class="flex flex-wrap justify-between mx-auto max-w-screen-lg my-5 pl-10 sm:pl-0">
         <div class="text-left whitespace-pre-line">
             <div>
                 <p class="text-xl">Awards</p>
@@ -147,7 +167,7 @@
             <img src="images/icons/cross.png" alt="Close" width="24" height="24">
         </button>
         <div class="bg-white p-8 relative flex items-center justify-center w-full h-full z-0">
-            <div class="image-container grid grid-cols-3 grid-rows-2 gap-4 bg-white p-8">
+            <div class="image-container grid grid-cols-2 grid-rows-3 sm:grid-cols-3 sm:grid-rows-2 gap-4 bg-white p-8">
                 <!-- Images will be appended here -->
             </div>
         </div>
