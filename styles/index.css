@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    .upcoming-exhibitions-container-index {
+        width: 400px;
+        /* Set a fixed width for desktop */
+    }
+}
+
+@media (max-width: 767px) {
+    .upcoming-exhibitions-container-index {
+        position: static;
+        /* On mobile, make it static so it falls into the normal document flow */
+        transform: none;
+        /* Remove the transform */
+        margin: 0 auto;
+        /* Center it horizontally */
+        width: auto;
+        /* Let the width be as long as the text */
+    }
+}
